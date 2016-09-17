@@ -7,6 +7,7 @@
 //
 
 #include <stdio.h>
+#include <stdlib.h>
 
 #define swap(a,b); {int temp = b; b = a; a = temp; }
 
@@ -31,7 +32,7 @@ int main(int argc, const char * argv[]) {
             scanf("%d %d ", &pairs[k2*2], &pairs[k2*2+1]);
         }
         
-        printf("%d ", NumOfPair(num_quiz, num_stu, num_pair, pairs));
+        printf("%d\n", NumOfPair(num_quiz, num_stu, num_pair, pairs));
     }
     
     return 0;
@@ -39,9 +40,10 @@ int main(int argc, const char * argv[]) {
 
 int NumOfPair(int num_quiz, int num_stu, int num_pair, int* pairs){
     //1. Data table
-    int pair_table[num_stu][num_stu];
+    int** pair_table = (int**)malloc(sizeof(int*)*num_stu);
     
     for(int k2 = 0; k2 < num_stu; k2++) {
+        pair_table[k2] = (int*) malloc(sizeof(int)*num_stu);
         for(int k3 = 0; k3 < num_stu; k3++) {
             pair_table[k2][k3] = 0;
         }
@@ -60,7 +62,7 @@ int NumOfPair(int num_quiz, int num_stu, int num_pair, int* pairs){
     
     
     //2. Search
-    int arr[num_stu];
+    int* arr = (int*)malloc(sizeof(int) * num_stu);
     int count = 0;
     int prefix = 0;
     
@@ -95,12 +97,16 @@ void SearchArr(int* arr, int prefix, int* count, int arrsize, int** pair_table) 
         }
     }
     else { // even
-        int min_val = arr[prefix-2] + 1;
+        int min_val = 0;
+        if (prefix != 0) {
+            min_val = arr[prefix-2] + 1;
+        }
+
         
         for(int k1 = min_val; k1 < arrsize; k1++) {
-            int dup_flag = 0;
+            int dup_flag = 0; // 중복제거
             
-            for(int k2 = 1; k1 < (prefix); k2+=2) {
+            for(int k2 = 1; k2 < (prefix); k2+=2) {
                 if (arr[k2] == k1) {
                     dup_flag = 1;
                 }
