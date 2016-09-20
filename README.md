@@ -3,6 +3,7 @@
 
 ## TOC
 1. [PICNIC](https://algospot.com/judge/problem/read/PICNIC)
+2. [FESTIVAL](https://algospot.com/judge/problem/read/FESTIVAL)
 
 ## Contributors
 - Daehan (kdh5852@gmail.com)
