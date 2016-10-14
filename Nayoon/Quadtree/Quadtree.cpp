@@ -1,8 +1,4 @@
 //
-// Created by dnclab on 2016. 10. 14..
-//
-
-//
 // Created by 황나윤 on 2016. 10. 14..
 //
 
