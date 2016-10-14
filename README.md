@@ -19,5 +19,6 @@
 - JYP_entertainment (pjo901018@naver.com)
 - nicholaskim (nicholaskim94@gmail.com)
 - MoonHyuk (godmoon00@naver.com)
+- NaYoon(Nayoon3136@gmail.com)
 
 ## License
