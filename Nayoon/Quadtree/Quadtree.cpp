@@ -5,6 +5,8 @@
 #include<stdio.h>
 #include<stdlib.h>
 
+char *ptr;
+
 typedef struct treeNode{
     char data;
     treeNode* left;
@@ -13,17 +15,42 @@ typedef struct treeNode{
     treeNode* mid2;
 }treeNode;
 
-treeNode* makeRootNode(char data, treeNode* left,treeNode* mid1, treeNode* mid2, treeNode* right){
+treeNode* makeRootNode(char* data, treeNode* left,treeNode* mid1, treeNode* mid2, treeNode* right){
     treeNode* root= (treeNode*)malloc(sizeof(treeNode));
-    root->data=data;
-    root->left=left;
-    root->right=right;
-    root->mid1=mid1;
-    root->mid2=mid2;
+    if(*data=='x'){
+        treeNode* tmp1=makeRootNode(data+1,NULL,NULL,NULL,NULL);
+        treeNode* tmp2=makeRootNode(data+2,NULL,NULL,NULL,NULL);
+        treeNode* tmp3=makeRootNode(data+3,NULL,NULL,NULL,NULL);
+        treeNode* tmp4=makeRootNode(data+4,NULL,NULL,NULL,NULL);
+
+        root=makeRootNode(data, tmp1, tmp2, tmp3, tmp4);
+    }
+    else {
+        root->data = *data;
+        root->left = left;
+        root->right = right;
+        root->mid1 = mid1;
+        root->mid2 = mid2;
+    }
     if(left->data=='x'){
-        makeRootNode('x',)
-    }right->data=='x'|mid1->data=='x'|mid2->data=='x')
-    return root;
+        treeNode* tmp1=makeRootNode(*ptr+1,NULL,NULL,NULL,NULL);
+        treeNode* tmp2=makeRootNode(*ptr+2,NULL,NULL,NULL,NULL);
+        treeNode* tmp3=makeRootNode(*ptr+3,NULL,NULL,NULL,NULL);
+        treeNode* tmp4=makeRootNode(*ptr+4,NULL,NULL,NULL,NULL);
+
+        makeRootNode('x', tmp1, tmp2, tmp3, tmp4);
+    }
+    else if(right->data=='x'){
+
+    }
+    else if(mid1->data=='x'){
+
+    }
+    else if(mid2->data=='x'){
+
+    }
+    else
+        return root;
 }
 
 int main(){
@@ -36,24 +63,26 @@ int main(){
     scanf("%d",&CaseNum);
     //case 개수 만큼 입력받기.
 
+    //각 포인터에 입력받은 배열의 주소가 들어갑니다.
+
     for(i=0;i<CaseNum;i++) {
         scanf("%s", arr[i]);
-
     }
 
     //arr[0][!],arr[1][!]...이 생성.
     for(i=0;i<CaseNum;i++) {
         //하나의 케이스. (각각)
         j=0;
-        while(arr[i][j]!='\0') {
-            if(arr[i][j]=='x'){
-                treeNode* tmp1=makeRootNode(arr[i][j+1],NULL,NULL,NULL,NULL);
-                treeNode* tmp2=makeRootNode(arr[i][j+2],NULL,NULL,NULL,NULL);
-                treeNode* tmp3=makeRootNode(arr[i][j+3],NULL,NULL,NULL,NULL);
-                treeNode* tmp4=makeRootNode(arr[i][j+4],NULL,NULL,NULL,NULL);
+        ptr=arr[i];
+        while(*ptr='\0') {
+            if(*ptr=='x'){
+                treeNode* tmp1=makeRootNode(*(ptr+1),NULL,NULL,NULL,NULL);
+                treeNode* tmp2=makeRootNode(*(ptr+2),NULL,NULL,NULL,NULL);
+                treeNode* tmp3=makeRootNode(*(ptr+3),NULL,NULL,NULL,NULL);
+                treeNode* tmp4=makeRootNode(*(ptr+4),NULL,NULL,NULL,NULL);
 
-                makeRootNode(arr[i][j], tmp1, tmp2, tmp3, tmp4);
-                j+=5;
+                makeRootNode(*ptr, tmp1, tmp2, tmp3, tmp4);
+                ptr+=5;
             }
             else{
                 makeRootNode(arr[i][j],NULL,NULL,NULL,NULL);
