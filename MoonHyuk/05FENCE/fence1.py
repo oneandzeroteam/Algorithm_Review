@@ -1,4 +1,4 @@
-#this works but time exceede
+#this works but time exceeded
 
 import re
 from collections import OrderedDict
