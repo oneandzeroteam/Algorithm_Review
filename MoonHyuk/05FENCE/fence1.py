@@ -1,4 +1,5 @@
-#this works but time exceeded
+#완전 이상한 알고리즘
+#작동은 어찌어찌 되는데 시간초과
 
 import re
 from collections import OrderedDict
@@ -31,14 +32,12 @@ def function(numb_string):
                 elif divide_li1[i][-1] > divide_li2[j][0]:
                     li.append(divide_li1[i] + '0' * len(divide_li2[j]))
                     p = re.compile('[^0]')
-                    divide_li1[i] = p.sub(divide_li2[j][0], divide_li1[i])
-                    li.append(divide_li1[i] + divide_li2[j])
+                    li.append(p.sub(divide_li2[j][0], divide_li1[i]) + divide_li2[j])
 
                 else:
                     li.append('0' * len(divide_li1[i]) + divide_li2[j])
                     p = re.compile('[^0]')
-                    divide_li2[j] = p.sub(divide_li1[i][-1], divide_li2[j])
-                    li.append(divide_li1[i] + divide_li2[j])
+                    li.append(divide_li1[i] + p.sub(divide_li1[i][-1], divide_li2[j]))
 
     return list(OrderedDict.fromkeys(li))
 
