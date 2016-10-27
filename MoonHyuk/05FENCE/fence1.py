@@ -1,5 +1,4 @@
-#완전 이상한 알고리즘
-#작동은 어찌어찌 되는데 시간초과
+#NOT WORKING
 
 import re
 from collections import OrderedDict
