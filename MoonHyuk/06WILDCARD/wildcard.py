@@ -12,6 +12,6 @@ for i in range(test_case):
             string_list.append(input_string)
 
     string_list.sort()
-
     for j in string_list:
         print(j)
+        
