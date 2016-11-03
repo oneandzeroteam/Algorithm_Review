@@ -3,12 +3,8 @@ import re
 
 test_case = int(input())
 for i in range(test_case):
-    re_string = input()
+    re_string = input().replace('?', '.').replace('*', '\w*')
     string_list = []
-
-    re_string = re_string.replace('?', '.')  # 문제에서 쓰인 ?는 정규표현식에서 .의 역할이므로 바꿔줍니다.
-    re_string = re_string.replace('*', '[a-zA-Z0-9]*')  # *앞에는 반복될 표현이 써져있어야 하므로 바꿔줍니다.
-
     numbs_string = int(input())
     for j in range(numbs_string):
         input_string = input()
