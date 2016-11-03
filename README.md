@@ -7,6 +7,7 @@
 3. [BOARDCOVER](https://algospot.com/judge/problem/read/BOARDCOVER)
 4. [QUADTREE](https://algospot.com/judge/problem/read/QUADTREE)
 5. [FENCE](https://algospot.com/judge/problem/read/FENCE)
+6. [WILDCARD](https://algospot.com/judge/problem/read/WILDCARD)
 
 ## Namespace
 각자 자신의 이름(혹은 alias) 다이렉토리를 가지고
