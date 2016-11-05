@@ -33,10 +33,10 @@ int calculate_cases(int cnt, int total, int* way) {
 
 int main(void) {
 	int i, j;
-	scanf_s("%d", &num_of_cases);
+	scanf("%d", &num_of_cases);
 	for (c_idx = 0; c_idx < num_of_cases; c_idx++) {
 
-		scanf_s("%d %d", &num_of_people, &num_of_pairs);
+		scanf("%d %d", &num_of_people, &num_of_pairs);
 
 		//친구 관계 행렬 설정
 		for (i = 0; i < num_of_people; i++)
@@ -46,7 +46,7 @@ int main(void) {
 		for (m_idx = 0; m_idx < num_of_pairs; m_idx++) {
 
 			int i, j;
-			scanf_s("%d %d", &i, &j);
+			scanf("%d %d", &i, &j);
 			relation_matrix[i][j] = 1;
 			relation_matrix[j][i] = 1;
 
