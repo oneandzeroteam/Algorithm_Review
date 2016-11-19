@@ -8,6 +8,8 @@
 4. [QUADTREE](https://algospot.com/judge/problem/read/QUADTREE)
 5. [FENCE](https://algospot.com/judge/problem/read/FENCE)
 6. [WILDCARD](https://algospot.com/judge/problem/read/WILDCARD)
+7. [JOSEPHUS](https://algospot.com/judge/problem/read/JOSEPHUS)
+8. [BRACKETS2](https://algospot.com/judge/problem/read/BRACKETS2)
 
 ## Namespace
 각자 자신의 이름(혹은 alias) 다이렉토리를 가지고
