@@ -1,3 +1,4 @@
+## 파이썬은 스택을 구현할필요가 없다!!
 def brackets2(input_string):
     li = []
     for i, j in enumerate(input_string):
