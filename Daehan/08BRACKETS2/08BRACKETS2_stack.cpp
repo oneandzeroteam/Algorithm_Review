@@ -32,7 +32,7 @@ int main() {
 //		for (int j = 0; j < input.size(); ++j) {
 //			cout << b.top();
 //			b.pop();
-//		} µð¹ö±ë¿ë
+//		} forDebuggingPurpose
 		while (!b.empty())
 			b.pop(); // clear b
 	}
