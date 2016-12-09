@@ -11,8 +11,10 @@
 7. [JOSEPHUS](https://algospot.com/judge/problem/read/JOSEPHUS)
 8. [BRACKETS2](https://algospot.com/judge/problem/read/BRACKETS2)
 9. [TRAVERSAL](https://algospot.com/judge/problem/read/TRAVERSAL)
+10. [FORTRESS](https://algospot.com/judge/problem/read/FORTRESS)
+11. [NERD2](https://algospot.com/judge/problem/read/NERD2)
+12. [RUNNINGMEDIAN](https://algospot.com/judge/problem/read/RUNNINGMEDIAN)
 
-10.[FORTRESS](https://algospot.com/judge/problem/read/FORTRESS)
 
 ## Namespace
 각자 자신의 이름(혹은 alias) 다이렉토리를 가지고
@@ -30,4 +32,4 @@
 - SungWon(lyusungwon@naver.com)
 
 ## License
-~~그런거안키운다~~
+~~그런거 안 키운다.~~
