@@ -1,5 +1,6 @@
-#include<iostream> // ´ä ¾È³ª¿È ¤Ð¤Ð
+#include<iostream>
 #include<queue>
+#include<functional>
 
 using namespace std;
 
@@ -15,7 +16,7 @@ struct RNG {
 
 int runningMedian(int n, RNG rng) {
 	priority_queue<int, vector<int>, less<int>> maxHeap;
-	priority_queue<int, vector<int>> minHeap;
+	priority_queue<int, vector<int>, greater<int>> minHeap;
 
 	int ret = 0;
 
