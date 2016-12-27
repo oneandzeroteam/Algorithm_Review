@@ -32,7 +32,7 @@
 - NaYoon(Nayoon3136@gmail.com)
 - SungWon(lyusungwon@naver.com)
 - SeonBeen(SunProg)
-- JiEun(plumlike)
+- JiEun(plumlike@gmail.com)
 - BoYee(boiihong)
 
 ## License
