@@ -22,9 +22,8 @@ char linked[SWITCHES][CLOCKS + 1] = {
 
 // checks if clocks are aligned, that is, all clocks point to 12.
 bool areAligned(const vector<int>& clocks) {
-	bool ret = false;
 	for (unsigned i = 0; i < clocks.size(); ++i)
-		if (clocks[i] != 12) return ret;
+		if (clocks[i] != 12) return false;
 	return true;
 }
 
@@ -37,20 +36,7 @@ void push(vector<int>& clocks, int swtch) {
 				clocks[clock] = 3;
 		}
 }
-/*
-int solve(vector<int>& clocks, int swtch) {
-	int ret = 0; 
-	if (areAligned(clocks)) return ret;
-	
-	for (int i = 0; i < SWITCHES; ++i) {
-		++ret;
-		push(clocks, i);
-		if (areAligned(clocks))
-			return ret;
-	}
-}
 
-*/
 
 // Recursion part. Go through all switches till pushed 3 times. There is 4^10 cases to see.
 int solve(vector<int>& clocks, int swtch) {
@@ -74,7 +60,7 @@ int main() {
 		for (unsigned j = 0; j < 16; ++j)
 			cin >> clocks[j];
 		int sol = solve(clocks, 0);
-		if (sol < 0 || sol > 30) cout << -1 << endl;
+		if (sol > 30) cout << -1 << endl;
 		else cout << sol << endl;
 	}
 }
