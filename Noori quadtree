@@ -1,0 +1,29 @@
+#include <iostream>
+#include <string>
+ 
+using namespace std;
+ 
+string input;
+ 
+string solve(string::iterator& iter) {
+    char head = *iter;
+    ++iter;
+    if (head != 'x')
+        return string(1, head);
+    string up = solve(iter);
+    up+=solve(iter);
+    string down = solve(iter);
+    down+= solve(iter);
+    return string("x") + down + up;
+}
+ 
+int main() {
+    int T;
+    
+    cin >> T;
+    while (T--) {
+        cin >> input;
+        string::iterator it = input.begin();
+        cout<< solve(it) << endl;
+    }
+}
