@@ -1,0 +1,107 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int strIndex = 0;
+
+typedef struct node { // 트리 구조
+  struct node *first;
+  struct node *second;
+  struct node *third;
+  struct node *fourth;
+  char color;
+}node;
+
+int addNode(node* node, char* imageStr, int strIndex) { // 문자열을 트리에 추가하는 함수
+
+  
+  for (int i = 0; i < 4;i++) {
+    node* temp1 = (node*)malloc(sizeof(node));
+    temp1->color = imageStr[strIndex];
+    switch (i) {
+      case 0:
+        if (imageStr[strIndex] == 'x') {
+          addNode(node->first,imageStr, strIndex);
+        }
+        node->first = temp1;
+        break;
+      case 1:
+        if (imageStr[strIndex] == 'x') {
+          addNode(node->second,imageStr, strIndex);
+        }
+        node->second = temp1;
+        break;
+      case 2:
+        if (imageStr[strIndex] == 'x') {
+          addNode(node->third,imageStr, strIndex);
+        }
+        node->third = temp1;
+        break;
+      case 3:
+        if (imageStr[strIndex] == 'x') {
+          addNode(node->fourth,imageStr, strIndex);
+        }
+        node->fourth = temp1;
+        break;
+
+    }
+
+    strIndex++;
+      
+  }
+  
+  
+  return 0;
+}
+
+int swap(node* node1, node* node2) { // 둘의 주소를 바꾸는 함수
+  node* temp;
+  temp = node1;
+  node1 = node2;
+  node2 = temp;
+  
+  return 1;
+}
+
+int solve(node* node) {
+  swap(node->first, node->third);
+  swap(node->second, node->fourth);
+  if (node->first->color == 'x')
+    solve(node->first);
+  if (node->second->color == 'x')
+    solve(node->second);
+  if (node->third->color == 'x')
+    solve(node->third);
+  if (node->fourth->color == 'x')
+    solve(node->fourth);
+}
+int printTree(node *node) {
+  printf("%c",node->color);
+  if (node->color == 'x') {
+    printTree(node->first);
+    printTree(node->second);
+    printTree(node->third);
+    printTree(node->fourth);
+  }
+  return 1;
+}
+
+int main() {
+  int case_Num = 0;
+
+	scanf("%d", &case_Num); // Input the # of cases
+
+  for (int i = 0; i < case_Num; i++) {
+    char *imageStr;
+    node* root = (node*)malloc(sizeof(node));
+   
+
+    scanf("%s",imageStr); // Input the image string
+
+    addNode(root,imageStr,strIndex);
+    solve(root);
+    printTree(root);
+
+
+  }
+}
