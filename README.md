@@ -16,6 +16,12 @@
 12. [RUNNINGMEDIAN](https://algospot.com/judge/problem/read/RUNNINGMEDIAN)
 13. [CLOCKSYNC](https://algospot.com/judge/problem/read/CLOCKSYNC)
 14. [FANMEETING](https://algospot.com/judge/problem/read/FANMEETING)
+15. [JLIS](https://algospot.com/judge/problem/read/JLIS)
+16. [PI](https://algospot.com/judge/problem/read/PI)
+17. [PACKING](https://algospot.com/judge/problem/read/PACKING)
+18. [OCR](https://algospot.com/judge/problem/read/OCR)
+
+
 
 
 ## Namespace
@@ -35,6 +41,7 @@
 - SeonBeen(SunProg)
 - JiEun(plumlike@gmail.com)
 - BoYee(boiihong)
+- SeongHo(ibk00316@naver.com)
 
 ## License
 ~~그런거 안 키운다.~~
