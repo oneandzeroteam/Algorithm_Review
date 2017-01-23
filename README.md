@@ -23,9 +23,6 @@
 19. [LUNCHBOX](https://algospot.com/judge/problem/read/LUNCHBOX)
 20. [STRJOIN](https://algospot.com/judge/problem/read/STRJOIN)
 
-
-
-
 ## Namespace
 각자 자신의 이름(혹은 alias) 다이렉토리를 가지고
 그안에 [문제번호, 문제이름(대문자)] 의 다이렉토리 내에 코드를 제출하는 것으로 함
@@ -47,3 +44,4 @@
 
 ## License
 ~~그런거 안 키운다.~~
+
