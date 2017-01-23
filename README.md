@@ -11,7 +11,7 @@
 7. [JOSEPHUS](https://algospot.com/judge/problem/read/JOSEPHUS)
 8. [BRACKETS2](https://algospot.com/judge/problem/read/BRACKETS2)
 9. [TRAVERSAL](https://algospot.com/judge/problem/read/TRAVERSAL)
-10. ~~[FORTRESS](https://algospot.com/judge/problem/read/FORTRESS)어려움~~
+10. ~~[FORTRESS](https://algospot.com/judge/problem/read/FORTRESS) - UNSOLVED~~
 11. [NERD2](https://algospot.com/judge/problem/read/NERD2)
 12. [RUNNINGMEDIAN](https://algospot.com/judge/problem/read/RUNNINGMEDIAN)
 13. [CLOCKSYNC](https://algospot.com/judge/problem/read/CLOCKSYNC)
@@ -20,8 +20,8 @@
 16. [PI](https://algospot.com/judge/problem/read/PI)
 17. [PACKING](https://algospot.com/judge/problem/read/PACKING)
 18. [OCR](https://algospot.com/judge/problem/read/OCR)
-
-
+19. [LUNCHBOX](https://algospot.com/judge/problem/read/LUNCHBOX)
+20. [STRJOIN](https://algospot.com/judge/problem/read/STRJOIN)
 
 
 ## Namespace
@@ -45,3 +45,4 @@
 
 ## License
 ~~그런거 안 키운다.~~
+
