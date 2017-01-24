@@ -1,0 +1,35 @@
+#include<algorithm>
+#include<cstdio>
+#include<iostream>
+#include<string>
+#include<vector>
+
+using namespace std;
+
+int n;
+int m[10000], e[10000];
+
+int heat() {
+	vector<pair<int,int> > order;
+	for(int i = 0; i < n; i++)
+		order.push_back(make_pair(-e[i], i));
+	sort(order.begin(), order.end());
+	int ret = 0, beginEat = 0;
+	for(int i = 0; i < n; i++) {
+		int box = order[i].second;
+		beginEat += m[box];
+		ret = max(ret, beginEat + e[box]);
+	}
+	return ret;
+}
+
+int main() {
+    int boxes;
+    scanf("%d", &boxes);
+    for(int el = 0; el < boxes; ++el) {
+    	scanf("%d", &n);
+    	for(int i = 0; i < n; i++) scanf("%d", &m[i]);
+    	for(int i = 0; i < n; i++) scanf("%d", &e[i]);
+    	printf("%d\n", heat());
+    }
+}
