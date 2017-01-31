@@ -40,7 +40,7 @@
 - NaYoon(Nayoon3136@gmail.com)
 - SungWon(lyusungwon@naver.com)
 - SeonBeen(SunProg)
-- JiEun(plumlike@gmail.com)
+- JiEun(plumlike7@gmail.com)
 - BoYee(boiihong)
 - SeongHo(ibk00316@naver.com)
 
