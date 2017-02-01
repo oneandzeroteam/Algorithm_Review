@@ -22,6 +22,8 @@
 18. [OCR](https://algospot.com/judge/problem/read/OCR)
 19. [LUNCHBOX](https://algospot.com/judge/problem/read/LUNCHBOX)
 20. [STRJOIN](https://algospot.com/judge/problem/read/STRJOIN)
+21. [ALLERGY](https://algospot.com/judge/problem/read/ALLERGY)
+22. [KAKURO2](https://algospot.com/judge/problem/read/KAKURO2)
 
 ## Namespace
 각자 자신의 이름(혹은 alias) 다이렉토리를 가지고
@@ -38,7 +40,7 @@
 - NaYoon(Nayoon3136@gmail.com)
 - SungWon(lyusungwon@naver.com)
 - SeonBeen(SunProg)
-- JiEun(plumlike@gmail.com)
+- JiEun(plumlike7@gmail.com)
 - BoYee(boiihong)
 - SeongHo(ibk00316@naver.com)
 
