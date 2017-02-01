@@ -47,18 +47,20 @@ void solve(int pos)
 		return;
 	}
 
+	//x,y좌표를 각각 reference type으로 잡는다
 	const int& y = dot[pos].first;
 	const int& x = dot[pos].second;
 
-	query& hintH = hint[hintIdx[y][x][1]];
-	query& hintW = hint[hintIdx[y][x][0]];
+	query& hintH = hint[hintIdx[y][x][1]]; // (y,x)의 세로힌트
+	query& hintW = hint[hintIdx[y][x][0]]; // (y,x)의 가로힌트
 
-	int visit = hintH.visit | hintW.visit;
+	int visit = hintH.visit | hintW.visit;  // visit은 지금까지 채운 숫자들의 집합을 bit mask로 표현함.
 
 	for (int i = 1; i <= 9 && hintH.sum >= i && hintW.sum >= i; i++)
-	{
+	{// 원소 i가 이미 들어가 있다면
 		if ((visit & (1 << i)) == 0)
 		{
+			
 			if (hintH.cnt == 1 && hintH.sum != i)
 				continue;
 			if (hintW.cnt == 1 && hintW.sum != i)
@@ -96,7 +98,7 @@ int main()
 			for (int j = 0; j < N; j++)
 			{
 				cin >> map[i][j];
-				if (map[i][j] == 1)
+				if (map[i][j] == 1)// dot은 빈칸만 집어넣음.
 					dot.push_back(make_pair(i, j));
 			}
 		}
@@ -108,7 +110,7 @@ int main()
 			cin >> y >> x >> d >> s;
 			hint.push_back(query(y - 1, x - 1, d, s));
 		}
-
+		// 힌트 벡터에 들어가있는 힌트들을 순회하면서 각각 몇개의 빈칸을 홀드하고 있는지 센다.
 		for (int i = 0; i < Q; i++)
 		{
 			int y = hint[i].y;
@@ -126,9 +128,10 @@ int main()
 					hint[i].cnt++;
 				}
 		}
-
+		//맵 채우기
 		solve(0);
 
+		//맵 출력
 		for (int i = 0; i < N; i++)
 		{
 			for (int j = 0; j < N; j++)
