@@ -1,0 +1,79 @@
+#include<iostream>
+#include<vector>
+#include<cmath>
+#include<float.h>
+#include<algorithm>
+
+using namespace std;
+
+typedef struct {
+    double x;
+    double y;
+}point;
+
+double minResult(vector<point>& positions, int nBase);
+vector<vector<double> > calDistanceMatrix(vector<point>& positions, int nBase);
+double calDistance(point srt, point end);
+
+int main(){
+    int testCase;
+    cin >> testCase;
+    
+    while(testCase--){
+        int nBase;
+        cin >> nBase;
+        
+        vector<point> positions(nBase);
+        for(int i=0; i<nBase; i++){
+            cin >> positions[i].x >> positions[i].y;
+        }
+        
+        printf("%.2lf\n", minResult(positions, nBase));
+    }
+    
+    return 0;
+}
+
+double minResult(vector<point>& positions, int nBase){
+    vector<vector<double> > distance = calDistanceMatrix(positions, nBase);
+       
+    vector<bool> reach(nBase, false);
+    reach[0] = true;
+    
+    double maxValue = 0;
+    
+    for(int i=0; i<nBase-1; i++){
+        int minIndex = -1;
+        double minValue = DBL_MAX;
+        for(int j=0; j<nBase; j++){
+            if(reach[j]){
+                for(int k=0; k<nBase; k++){
+                    if(!reach[k] && distance[j][k] < minValue){
+                        minValue = distance[j][k];
+                        minIndex = k;
+                    }
+                }
+            }
+        }
+        reach[minIndex] = true;
+        maxValue = max(maxValue, minValue);
+    }
+    
+    return maxValue;
+}
+
+vector<vector<double> > calDistanceMatrix(vector<point>& positions, int nBase){
+    vector<vector<double> > distance(nBase, vector<double>(nBase, 0));
+    
+    for(int i=0; i<nBase; i++){
+        for(int j=0; j<nBase; j++){
+            distance[i][j] = distance[j][i] = calDistance(positions[i], positions[j]);
+        }
+    }
+
+    return distance;
+}
+
+double calDistance(point srt, point end){
+    return sqrt((srt.x - end.x) * (srt.x - end.x) + (srt.y - end.y) * (srt.y - end.y));
+}
