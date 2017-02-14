@@ -1,0 +1,36 @@
+#include<iostream>
+
+using namespace std;
+
+int main(){
+ int testCase;
+ cin >> testCase;
+
+ while(testCase--){
+  long long playGame, win;
+  cin >> playGame >> win;
+
+  int targetRatio = win*100 / playGame + 1;
+
+  if(targetRatio >= 100){
+   cout << -1 << endl;
+  }
+  else{
+   long long lo = 0, hi = 2*playGame;
+
+   while(lo + 1 < hi){
+    long long mid = (lo + hi) / 2;
+
+    int ratio = 100 * (win+mid) / (playGame+mid);
+
+    if(ratio >= targetRatio)
+     hi = mid;
+    else if(ratio < targetRatio)
+     lo = mid;
+   }
+
+   cout << hi << endl;
+  }
+ }
+ return 0;
+}
