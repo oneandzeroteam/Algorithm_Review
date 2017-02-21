@@ -1,0 +1,74 @@
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+const int MAX = 10000000;
+
+int MinPrime[MAX + 1];
+int MinPrimeNum[MAX + 1];
+int Factor[MAX + 1];
+
+void Erasto() {
+	MinPrime[0] = MinPrime[1] = -1;
+
+	for (int i = 2; i <= MAX; ++i) 
+	  MinPrime[i] = i;
+
+	int sqrtn = int(sqrt(MAX));
+
+	for (int i = 2; i <= sqrtn; ++i) {
+		if (MinPrime[i] == i) {
+			for (int j = i*i; j <= MAX; j += i) 
+			  if(MinPrime[j] == j) 
+			    MinPrime[j] = i;
+		}
+	}
+
+	return;
+}
+
+void Find_Factor() {
+	Factor[0] = Factor[1] = 1;
+
+	for (int num = 2; num <= MAX; ++num) {
+		if (MinPrime[num] == num) {
+			Factor[num] = 2;
+			MinPrimeNum[num] = 1;
+		}
+		else {
+			int LowerNum = num / MinPrime[num];
+
+			if (MinPrime[LowerNum] != MinPrime[num]) 
+			    MinPrimeNum[num] = 1;
+			else 
+			    MinPrimeNum[num] = MinPrimeNum[LowerNum] + 1;
+
+			Factor[num] = (Factor[LowerNum] / MinPrimeNum[num]) * (MinPrimeNum[num] + 1);
+		}
+	}
+	return;
+}
+
+int main() {
+	std::ios::sync_with_stdio(false);
+	
+
+	int C;
+	int n, lo, hi;
+	cin >> C;
+
+	Erasto();
+	Find_Factor();
+	while (C--) {
+		cin >> n >> lo >> hi;
+
+		int answer = 0;
+
+		for (int i = lo; i <= hi; ++i) 
+			if (Factor[i] == n) ++answer;
+		
+		cout << answer << endl;
+	}
+	return 0;
+}
