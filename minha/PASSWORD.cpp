@@ -8,24 +8,22 @@ using namespace std;
 
 const int TM = 1000*1000*10;
 
-// minFactor[i] = i 의 가장 작은 소인수 (i 가 소수인 경우 자기 자신)
+
 int minFactor[TM+1];
 
-// 에라토스테네스의 체를 수행하면서 소인수분해를 위한 정보도 저장한다
+
 void eratosthenes2() {
 	// 1 은 항상 예외 처리
-	minFactor[0] = minFactor[1] = -1;
+	minFactor[0] = minFactor[1] = -1;	
 
-	// 모든 숫자를 처음에는 소수로 표시해 둔다
 	for(int i = 2; i <= TM; ++i)
 		minFactor[i] = i;
 
-	// 에라토스테네스의 체를 수행한다
 	for(int i = 2; i*i <= TM; ++i) {
 		if(minFactor[i] == i) {
 			minFactor[i] = i;
 			for(int j = i*i; j <= TM; j += i)
-				// 아직 약수를 본 적 없는 숫자인 경우 i 를 써 둔다
+				
 				if(minFactor[j] == j)
 					minFactor[j] = i;
 		}
