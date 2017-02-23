@@ -24,6 +24,11 @@
 20. [STRJOIN](https://algospot.com/judge/problem/read/STRJOIN)
 21. [ALLERGY](https://algospot.com/judge/problem/read/ALLERGY)
 22. [KAKURO2](https://algospot.com/judge/problem/read/KAKURO2)
+23. [RATIO](https://algospot.com/judge/problem/read/RATIO)
+22. [FOSSIL](https://algospot.com/judge/problem/read/FOSSIL)
+22. [PASS486](https://algospot.com/judge/problem/read/PASS486)
+22. [POTION](https://algospot.com/judge/problem/read/POTION)
+
 
 ## Namespace
 각자 자신의 이름(혹은 alias) 다이렉토리를 가지고
@@ -42,7 +47,6 @@
 - SeonBeen(SunProg)
 - JiEun(plumlike7@gmail.com)
 - BoYee(boiihong)
-- SeongHo(ibk00316@naver.com)
 
 ## License
 ~~그런거 안 키운다.~~
