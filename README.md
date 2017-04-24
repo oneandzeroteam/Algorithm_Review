@@ -25,9 +25,11 @@
 21. [ALLERGY](https://algospot.com/judge/problem/read/ALLERGY)
 22. [KAKURO2](https://algospot.com/judge/problem/read/KAKURO2)
 23. [RATIO](https://algospot.com/judge/problem/read/RATIO)
-22. [FOSSIL](https://algospot.com/judge/problem/read/FOSSIL)
-22. [PASS486](https://algospot.com/judge/problem/read/PASS486)
-22. [POTION](https://algospot.com/judge/problem/read/POTION)
+24. [FOSSIL](https://algospot.com/judge/problem/read/FOSSIL)
+25. [PASS486](https://algospot.com/judge/problem/read/PASS486)
+26. [POTION](https://algospot.com/judge/problem/read/POTION)
+27. [DICTIONARY](https://algospot.com/judge/problem/read/DICTIONARY)
+28. [WORDCHAIN](https://algospot.com/judge/problem/read/WORDCHAIN)
 
 
 ## Namespace
