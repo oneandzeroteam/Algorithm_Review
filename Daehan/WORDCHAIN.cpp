@@ -74,7 +74,6 @@ vector<int> getEulerTrailOrCircuit(){
     }
 
     return circuit;
-
 }
 
 
