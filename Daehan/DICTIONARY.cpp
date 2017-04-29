@@ -6,7 +6,7 @@ using namespace std;
 
 vector<int> visited(26,0);
 vector<vector<int>> adj;
-vector<int> order;
+vector<char> order;
 
 template<typename T>
 void print(const vector<T>& v){
@@ -49,8 +49,7 @@ void dfs(int here){
     order.push_back(here);
 }
 
-
-vector<int> topologicalSort(){
+vector<char> topologicalSort(){
     int n = adj.size();
     visited = vector<int>(n,0);
 
@@ -66,7 +65,7 @@ vector<int> topologicalSort(){
     for(int i=0; i<n; ++i){
         for(int j= i+1; j<n; ++j){
             if(adj[order[j]][order[i]])
-                return vector<int>();
+                return vector<char>();
         }
     }
 
@@ -88,15 +87,12 @@ int main() {
             cin >> words[i];
 
         makeGraph(words);
-
+        
         order =topologicalSort();
 
-        vector<char> order2(26);
-        copy(order.begin(), order.end(),order2.begin());
-
         if(!order.empty()) {
-            for (int i = 0; i < order2.size(); ++i) order2[i] += 'a';
-            print(order2);
+            for (int i = 0; i < order.size(); ++i) order[i] += 'a';
+            print(order);
         }
         else
             cout << "INVALID HYPOTHESIS" << endl;
