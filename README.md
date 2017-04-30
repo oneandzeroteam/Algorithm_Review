@@ -30,7 +30,8 @@
 26. [POTION](https://algospot.com/judge/problem/read/POTION)
 27. [DICTIONARY](https://algospot.com/judge/problem/read/DICTIONARY)
 28. [WORDCHAIN](https://algospot.com/judge/problem/read/WORDCHAIN)
-
+29. [SORTGAME](https://algospot.com/judge/problem/read/SORTGAME)
+30. [CHILDRENDAY](https://algospot.com/judge/problem/read/CHILDRENDAY)
 
 ## Namespace
 각자 자신의 이름(혹은 alias) 다이렉토리를 가지고
