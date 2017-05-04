@@ -26,6 +26,7 @@ int append(int here, int edge, int mod) {
 	int there = here * 10 + edge;
 	if (there >= mod)
 		return mod + there % mod;
+	return there % mod;
 }
 
 string gifts(string digits, int n, int m) {
