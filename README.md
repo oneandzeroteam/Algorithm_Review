@@ -32,6 +32,9 @@
 28. [WORDCHAIN](https://algospot.com/judge/problem/read/WORDCHAIN)
 29. [SORTGAME](https://algospot.com/judge/problem/read/SORTGAME)
 30. [CHILDRENDAY](https://algospot.com/judge/problem/read/CHILDRENDAY)
+31. [ROUTING](https://algospot.com/judge/problem/read/ROUTING)
+32. [FIRETRUCKS](https://algospot.com/judge/problem/read/FIRETRUCKS)
+
 
 ## Namespace
 각자 자신의 이름(혹은 alias) 다이렉토리를 가지고
