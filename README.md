@@ -34,6 +34,10 @@
 30. [CHILDRENDAY](https://algospot.com/judge/problem/read/CHILDRENDAY)
 31. [ROUTING](https://algospot.com/judge/problem/read/ROUTING)
 32. [FIRETRUCKS](https://algospot.com/judge/problem/read/FIRETRUCKS)
+33. [LAN](https://algospot.com/judge/problem/read/LAN)
+34. [TPATH](https://algospot.com/judge/problem/read/TPATH)
+35. [GRADUATION](https://algospot.com/judge/problem/read/GRADUATION)
+36. [CHRISTMAS](https://algospot.com/judge/problem/read/CHRISTMAS)
 
 
 ## Namespace
