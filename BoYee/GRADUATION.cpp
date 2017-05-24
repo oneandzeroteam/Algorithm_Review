@@ -46,21 +46,17 @@ int bitCount(int n)
 int least_semester(int semester, int taken)
 {
 	int ret;
-//	printf("count taken : %d, %x\n",bitCount(taken),taken );
 	if(bitCount(taken) >= k) // 다 들었다!
 	{
-	//	printf("possible branch!\n");
 		return 0;
 	}
 	if(semester == m) // 학기 다 끝남..
 	{
-	//	printf("semester: %d\n",semester);
 		return INF;
 	}
-//	int& ret = cache[semester][taken];
-//	if(ret != -1) return ret;
-//		ret = INF;
 
+	// no memoization
+	
 	ret  = INF;
 
 	//열리는 과목 중에서 안들은것
@@ -75,23 +71,15 @@ int least_semester(int semester, int taken)
 		}
 	}
 
-	//printf("cantake : %x", canTake);
 	int take;
 	for(take = canTake; take > 0; take = (take -1) & canTake)
 	{
-		// l 과목 초과하여 듣는 경우
 		if(bitCount(take) > l) continue;
-	//	printf("before ret %d /",ret);
 		ret = MIN(ret, least_semester( semester + 1, taken | take) + 1 );
-	//	printf("after ret %d\n",ret);
 	}
 
-//	printf("before ret %d /",ret);
 	// 이번 학기에는 아무것도 듣지 않는다.
 	ret = MIN(ret, least_semester(semester + 1, taken));
-//	printf("after ret %d\n",ret);
-
-//	printf("cantake : %x, take : %d, ret: %d\n",canTake ,take ,ret);
 	return ret;
 }
 
