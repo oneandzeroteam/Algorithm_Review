@@ -17,9 +17,9 @@ struct UnionFind{
         if(u == parent[u]) return u;
         return parent[u] = find(parent[u]);
     }
-    
+
     //After merging,it returns the representative of merged sets.
-    
+
     int merge(int u, int v){
         if(u == -1 || v == -1)
             return max(u,v);
@@ -85,17 +85,17 @@ int main() {
             char stance[4];
             scanf("%s%d%d",stance,&p,&q);
             if(contradict != -1) continue;
-            if(string(stance) == "ACK")
+            if(string(stance) == "ACK"){
                 if(!a.ack(p,q))
                     contradict = i;
-            else 
+            } else
                 if(!a.dis(p,q))
-                    contradict = i;      
+                    contradict = i;
         }
         if(contradict == -1)
             cout << "MAX PARTY SIZE IS "<< maxParty(a) << endl;
         else
             cout << "CONTRADICTION AT " << contradict << endl;
 
-        }
     }
+}
