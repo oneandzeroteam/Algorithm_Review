@@ -40,6 +40,7 @@
 36. [CHRISTMAS](https://algospot.com/judge/problem/read/CHRISTMAS)
 37. [MORDOR](https://algospot.com/judge/problem/read/MORDOR)
 38. [FAMILYTREE](https://algospot.com/judge/problem/read/FAMILYTREE)
+39. [EDITORWARS](https://algospot.com/judge/problem/read/EDITORWARS)
 
 
 ## Namespace
