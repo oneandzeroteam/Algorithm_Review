@@ -41,7 +41,13 @@
 37. [MORDOR](https://algospot.com/judge/problem/read/MORDOR)
 38. [FAMILYTREE](https://algospot.com/judge/problem/read/FAMILYTREE)
 39. [EDITORWARS](https://algospot.com/judge/problem/read/EDITORWARS)
+40. [SOLONG](https://algospot.com/judge/problem/read/SOLONG)
 
+```cpp,
+TIME this_moment();
+its_long_story.ends();
+everyone.deserves(this_moment);
+```
 
 ## Namespace
 각자 자신의 이름(혹은 alias) 다이렉토리를 가지고
